@@ -1,0 +1,174 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../images/bg-small.jpg") no-repeat center bottom fixed;
+  /*background: #d6d6d6;*/
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  color: #ffffff;
+  line-height: 1.6;
+  font-family: 'PT Sans', Helvetica, sans-serif;
+  padding: 2%;
+}
+
+.logo {
+  display: block;
+  background: url("../images/logo.png") no-repeat center center;
+  background-size: 250px 250px;
+  height: 250px;
+}
+
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.couple {
+  text-align: center;
+}
+
+.couple span {
+  color: #f9cfd3;
+}
+
+.wrapper {
+  box-shadow: 0 0 15px 0 rgba(255, 0, 66, 0.5);
+}
+
+.wrapper > * {
+  padding: 1em;
+}
+
+.wedding-info {
+  background: #f7a3b2;
+}
+
+.wedding-info h3, .wedding-info ul {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.save-date {
+  background: #fff;
+  color: #f7a3b2;
+}
+
+/*Submit form style*/
+.save-date form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.save-date form label {
+  display: block;
+}
+
+#checkbox-label {
+  margin-top: 8px;
+}
+
+.save-date form p {
+  margin: 0;
+}
+
+.save-date form .full {
+  grid-column: 1 / 3;
+}
+.save-date form button, .save-date form input, .save-date form textarea {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #f7a3b2;
+}
+
+.save-date form button {
+  color: #fff;
+  background: #f7a3b2;
+  border: 0;
+  text-transform: uppercase;
+}
+
+.save-date form button:hover, .save-date form button:focus {
+  background: #f34c77;
+  color: #fff;
+  outline: 0;
+  transition: background-color 1s ease-out;
+}
+/* check box styling*/
+/* hide original check box*/
+input[type=checkbox] {
+	visibility: hidden;
+}
+
+.checkbox {
+  border: 0;
+  width: 120px;
+	height: 40px;
+	background: #666666;
+	border-radius: 50px;
+	position: relative;
+}
+
+.checkbox:before {
+	content: 'Yes';
+	position: absolute;
+	top: 8px;
+	left: 17px;
+	height: 2px;
+	color: #f7a3b2;
+	font-size: 16px;
+  font-weight: 600;
+}
+
+.checkbox:after {
+	content: 'No';
+	position: absolute;
+	top: 9px;
+	left: 80px;
+	height: 2px;
+	color: #fff;
+	font-size: 16px;
+  font-weight: 600;
+}
+
+.checkbox label {
+	display: block;
+	width: 52px;
+	height: 22px;
+	border-radius: 50px;
+
+	transition: all .5s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 9px;
+	z-index: 1;
+	left: 12px;
+	background: #ddd;
+}
+
+.checkbox input[type=checkbox]:checked + label {
+	left: 60px;
+	background: #f7a3b2;
+}
+
+/* responsive large screen */
+@media(min-width: 700px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wrapper > * {
+    padding: 2em;
+  }
+}
