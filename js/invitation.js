@@ -43,7 +43,11 @@
           park: park,
           message: message
         }, function() {
-          alert("Sent");
+          $('#contact-form').find('.alert-messages').css('display','block');
+          $('#contact-form')[0].reset();
+          setTimeout(function() {
+            $('#contact-form').find('.alert-messages').css('display','none');
+          }, 2000);
         });
         return false;
       }

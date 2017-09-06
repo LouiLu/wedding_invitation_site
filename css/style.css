@@ -161,6 +161,16 @@ input[type=checkbox] {
 	background: #f7a3b2;
 }
 
+/* alert */
+.alert-messages {
+  text-align: center;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  margin-bottom: 10px;
+  display: none;
+}
+
 /* responsive large screen */
 @media(min-width: 700px) {
   .wrapper {
