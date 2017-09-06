@@ -11,7 +11,7 @@
 
   // Contact form validator & firebase setup
   $(function() {
-    //$('#contact-form').validator();
+    $('#contact-form').validator();
     // init firebase
     // Initialize Firebase
     var config = {

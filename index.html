@@ -8,45 +8,51 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="shortcut icon" href="images/logo.png" />
 </head>
 <body>
   <div class="container">
     <!--h1 class="couple"><span>Loui & Yang</span></h1-->
     <div class="wrapper animated bounceInDown">
       <div class="wedding-info">
-        <div class="logo"> </div>
-        <h3>Our Wedding on:</h3>
+        <div class="logo animated infinite pulse"> </div>
+        <h2>陆骏豪&张洋的婚礼</h2>
         <ul>
-          <li><i class="fa fa-map-marker"></i> Address</li>
-          <li><i class="fa fa-clock-o"></i> Time</li>
+          <li><i class="fa fa-map-marker"></i> 地址：上海市浦东新区南洋泾路578号<br>（近杨高中路）</li>
+          <li><i class="fa fa-clock-o"></i> 时间：2017年10月1日下午6点08分</li>
         </ul>
       </div>
       <div class="save-date">
-        <h3>Let me know you coming!</h3>
+        <h4>我们诚挚的邀请您来参加我们的婚礼</h4>
         <form id="contact-form">
-          <p class="full">
-            <label>Name</label>
-            <input type="text" name="name" id="name">
-          </p>
-          <p class="full">
-            <label>Number</label>
-            <input type="number" name="number" id="number">
-          </p>
+          <div class="full form-group">
+            <!--label>姓名：</label-->
+            <input placeholder="姓名" type="text" name="name" id="name" required="required" data-error="请输入姓名" />
+            <div class="form-control-border"></div>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="full form-group">
+            <!--label>来席人数：</label-->
+            <input placeholder="来席人数" type="number" min="0" name="number" id="number" required="required" data-error="请填入一个数字">
+            <div class="form-control-border"></div>
+            <div class="help-block with-errors"></div>
+          </div>
           <p>
-            <label id="checkbox-label">Parking Needed?</label>
+            <label id="checkbox-label">是否需要停车?</label>
             <div class="checkbox">
               <input type="checkbox" id="checkbox-input" value="1" name="" />
               <label for="checkbox-input"></label>
             </div>
           </p>
-          <p class="full">
-            <label>Message to Us</label>
-            <textarea name="message" id="message" rows="5"></textarea>
-          </p>
-          <p class="full">
-            <div class="alert-messages full animated fadeIn">Message Sent</div>
-            <button class="full" type="submit" name="submit">Submit</button>
-          </p>
+          <div class="full">
+            <!--label>留言祝福＊</label-->
+            <textarea placeholder="祝福留言＊" name="message" id="message" rows="5"></textarea>
+          </div>
+          <div class="full">
+            <div class="alert-messages alert-success alert full animated fadeIn">已提交</div>
+            <button class="full" type="submit" name="submit">提交</button>
+          </div>
         </form>
       </div>
     </div>
