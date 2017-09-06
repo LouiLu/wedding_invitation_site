@@ -23,14 +23,14 @@
       </div>
       <div class="save-date">
         <h3>Let me know you coming!</h3>
-        <form action="">
+        <form id="contact-form">
           <p class="full">
             <label>Name</label>
-            <input type="text" name="name">
+            <input type="text" name="name" id="name">
           </p>
           <p class="full">
             <label>Number</label>
-            <input type="number" name="number">
+            <input type="number" name="number" id="number">
           </p>
           <p>
             <label id="checkbox-label">Parking Needed?</label>
@@ -44,7 +44,7 @@
             <textarea name="message" id="message" rows="5"></textarea>
           </p>
           <p class="full">
-            <button type="button" name="submit">Submit</button>
+            <button type="submit" name="submit">Submit</button>
           </p>
         </form>
       </div>
@@ -53,6 +53,8 @@
 </body>
 
 <!--JS-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
 <script type="text/javascript" src="js/invitation.js"></script>
+<script type="text/javascript" src="js/validator.js"></script>
 </html>
