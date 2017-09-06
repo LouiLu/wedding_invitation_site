@@ -12,7 +12,54 @@
   // Contact form validator & firebase setup
   $(function() {
     $('#contact-form').validator();
-    // init firebase
+
+    /* try writing into file
+    function writeToFile(data){
+        console.log(data);
+    }
+
+    function formCallBack() {
+      $('#contact-form').find('.alert-messages').css('display','block');
+      $('#contact-form')[0].reset();
+      setTimeout(function() {
+        $('#contact-form').find('.alert-messages').css('display','none');
+      }, 2000);
+    }*/
+    // onsubmit send to firebase
+    $('#contact-form').on('submit', function(e) {
+      //console.log('clicked');
+      if (!e.isDefaultPrevented()) {
+        var name = $('#name').val();
+        var number = $('#number').val();
+        var park = $('#checkbox-input').is(':checked') ? 'Yes' : 'No';
+        //console.log('Park needed : '.park);
+        var message = $('#message').val();
+
+        var that = $(this),
+            url = that.attr('action'),
+            type = that.attr('method'),
+            data = {"name":name, "number":number, "park":park, "message":message};
+
+        //console.log(data);
+
+        $.ajax({
+          url: url,
+          type: type,
+          data: data,
+          success: function(res){
+            //console.log('yes sent');
+            $('.alert-messages').css('display','block');
+            $('#contact-form')[0].reset();
+            setTimeout(function() {
+              $('.alert-messages').css('display','none');
+            }, 2000);
+          }
+        });
+        return false;
+      }
+    });
+
+    /* init firebase - firebase cannot work within China area
     // Initialize Firebase
     var config = {
       apiKey: "AIzaSyBw2LJdqZkHbyDbaL6eEZx95SWh06ylVEc",
@@ -51,7 +98,7 @@
         });
         return false;
       }
-    });
+    });*/
   });
   // /Contact form validator
 

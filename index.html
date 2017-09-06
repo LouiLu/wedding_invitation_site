@@ -25,7 +25,7 @@
       </div>
       <div class="save-date">
         <h4>我们诚挚的邀请您来参加我们的婚礼</h4>
-        <form id="contact-form">
+        <form id="contact-form" action="ajax/contact.php" method="POST" class="ajax">
           <div class="full form-group">
             <!--label>姓名：</label-->
             <input placeholder="姓名" type="text" name="name" id="name" required="required" data-error="请输入姓名" />
@@ -41,7 +41,7 @@
           <p>
             <label id="checkbox-label">是否需要停车?</label>
             <center><div class="checkbox">
-              <input type="checkbox" id="checkbox-input" value="1" name="" />
+              <input type="checkbox" id="checkbox-input" value="1" name="checkbox-input" />
               <label for="checkbox-input"></label>
             </div></center>
           </p>
@@ -51,7 +51,7 @@
           </div>
           <div class="full">
             <div class="alert-messages alert-success alert full animated fadeIn">已提交</div>
-            <button class="full" type="submit" name="submit">提交</button>
+            <button class="full" type="submit">提交</button>
           </div>
         </form>
       </div>
